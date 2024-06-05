@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>jsonBitGet</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>jsonBitGet</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			<java.version>17</java.version>
+	        <maven.compiler.source>17</maven.compiler.source>
+        	<maven.compiler.target>17</maven.compiler.target>
+  </properties>
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifestFile>${project.basedir}/src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+                </archive>
+            </configuration>
+        </plugin>
+        </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- log warnings... --><!-- -->
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <!-- Logback Classic -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+        <!-- Logback Core -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+       <!-- trying to import dependencies...--> 
+ 
+    <!-- dotenv dependency -->
+	<dependency>
+	    <groupId>io.github.cdimascio</groupId>
+	    <artifactId>java-dotenv</artifactId>
+	    <version>5.2.2</version>
+	</dependency>
+        <!-- Bitget Dependency x-->
+        <dependency>
+            <groupId>com.upex.contract</groupId>
+            <artifactId>bitget-java-sdk-api</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+ 
+	<dependency>
+    	<groupId>com.squareup.retrofit2</groupId>
+    	<artifactId>retrofit</artifactId>
+    	<version>2.9.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>com.squareup.retrofit2</groupId>
+    	<artifactId>converter-gson</artifactId>
+    	<version>2.9.0</version> <!-- Use the same version as your retrofit dependency -->
+	</dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.2.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.18</version><!-- high vulnerability-->
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version><!-- high vulnerability-->
+        </dependency>
+        <!-- other dependencies -->
+                <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version> <!-- Use the latest version -->
+        </dependency>      
+      <dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20210307</version>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.13.4</version>
+</dependency> 
+  </dependencies>
+</project>

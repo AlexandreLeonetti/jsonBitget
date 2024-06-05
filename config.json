@@ -1,0 +1,16 @@
+{
+	"binance":{
+		"allDetails":[
+		{
+			"name": "XXXUSDT",
+			"pricePrecision": 5,
+			"sizePrecision": 0
+		},
+		{
+			"name": "BTCUSDT",
+			"pricePrecision": 1,
+			"sizePrecision": 3
+		}
+		]
+	}
+} 

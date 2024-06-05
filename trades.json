@@ -1,0 +1,25 @@
+{
+	"allTrades": [
+		{
+			"name": "XXXUSDT",
+			"size": "0.2",
+			"stop":"0.01",
+			"limit": "0.00995",
+			"minPrice":"520"
+		},
+		{
+			"name": "BNBUSDT",
+			"size": "0.25",
+			"stop": "0.01",
+			"limit": "0.00997",
+			"minPrice":"615"
+		},
+		{
+			"name":"BTCUSDT",
+			"size":"0.015",
+			"stop":"0.005",
+			"limit":"0.006",
+			"minPrice":"70000"
+		}
+		]
+	}	
