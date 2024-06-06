@@ -2,9 +2,9 @@
 	"binance":{
 		"allDetails":[
 		{
-			"name": "XXXUSDT",
-			"pricePrecision": 5,
-			"sizePrecision": 0
+			"name": "ETHUSDT",
+			"pricePrecision": 2,
+			"sizePrecision": 2
 		},
 		{
 			"name": "BTCUSDT",

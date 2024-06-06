@@ -8,17 +8,17 @@
 			"minPrice":"520"
 		},
 		{
-			"name": "BNBUSDT",
-			"size": "0.25",
-			"stop": "0.01",
-			"limit": "0.00997",
-			"minPrice":"615"
+			"name": "ETHUSDT",
+			"size": "0.1",
+			"stop": "0.002",
+			"limit": "0.0022",
+			"minPrice":"3515"
 		},
 		{
 			"name":"BTCUSDT",
-			"size":"0.015",
-			"stop":"0.005",
-			"limit":"0.006",
+			"size":"0.001",
+			"stop":"0.002",
+			"limit":"0.003",
 			"minPrice":"70000"
 		}
 		]
