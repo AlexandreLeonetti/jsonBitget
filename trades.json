@@ -12,14 +12,14 @@
 			"size": "0.1",
 			"stop": "0.002",
 			"limit": "0.0022",
-			"minPrice":"3515"
+			"minPrice":"4515"
 		},
 		{
 			"name":"BTCUSDT",
 			"size":"0.001",
 			"stop":"0.002",
 			"limit":"0.003",
-			"minPrice":"70000"
+			"minPrice":"80000"
 		}
 		]
 	}	

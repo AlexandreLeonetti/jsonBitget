@@ -17,6 +17,7 @@ public class EntryBitGet{
     	String sTriggerMargin;
     	String sLimitMargin;
     	String size;
+    	String treshold;
 
         Dotenv dotenv = Dotenv.configure().directory(System.getProperty("user.dir")).load();
         BitgetRestClient bitgetRestClient = createBitgetRestClient(dotenv);
@@ -27,6 +28,7 @@ public class EntryBitGet{
         	sTriggerMargin = details.getStop();
         	sLimitMargin   = details.getLimit();
         	size		   = details.getSize();
+        	treshold	   = details.getMinPrice();
         }else {
             System.out.println("Failed to get details of : "+symbol);
         	return -1;
@@ -53,7 +55,11 @@ public class EntryBitGet{
         //real.stopBuyDemoFutures();
         // 1 get price
          String realPrice = real.getTicker(symbol);
-        // add conditional buy treshold 
+        // add conditional buy treshold <<<< HERE 
+         if(Utils.isLess(realPrice,treshold)) {// shouldNotbuy is set to true id price is lower than treshold
+        	 System.out.printf("Price %s is lower than treshold %s, so we don't buy.",realPrice,treshold);
+        	 return 0;
+         }
         // 2 limit buy
          size = Utils.numberFormatter(details.getSizePrecision(), sizef);
         real.limitBuy(symbol, size , realPrice);// symbol, size, price

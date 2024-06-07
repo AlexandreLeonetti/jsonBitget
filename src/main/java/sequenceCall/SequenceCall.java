@@ -36,8 +36,8 @@ public class SequenceCall{
                 EntryBitGet bitget = new EntryBitGet();
             for (String s : sequence) {
             	try {
-                int res = bitget.run(s);
-                System.out.println("bitget entry returned : "+res);
+            		int res = bitget.run(s);
+            		System.out.println("bitget entry returned : "+res);
             	}catch(Exception e) {
             		System.out.println(e);
             	}

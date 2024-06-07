@@ -27,4 +27,14 @@ public class Utils {
             System.err.println("Interrupted during sleep");
         }
 	}
+	
+	public static boolean isLess(String price, String treshold) {
+		float pricef = Float.parseFloat(price);
+		float tresholdf= Float.parseFloat(treshold);
+		if(pricef<tresholdf) {
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
