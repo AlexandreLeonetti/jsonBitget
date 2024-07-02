@@ -4,7 +4,7 @@ package bitget;
 import com.bitget.openapi.common.client.BitgetRestClient;
 import com.bitget.openapi.dto.response.ResponseResult;
 import com.alibaba.fastjson.JSON;
-
+import utils.Utils;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
@@ -97,7 +97,7 @@ public class RealFuturesService {
     Call<ResponseResult> ticker(@QueryMap Map<String, String> paramMap);
     */
     
-    public String getTicker(String symbol) throws Exception {
+    public String getTicker(String symbol, int pricePrecision) throws Exception {
     	try {
     		Map<String, String> paramMap = new HashMap<>();
     		paramMap.put("symbol", symbol);
@@ -116,7 +116,8 @@ public class RealFuturesService {
             
             float price = Float.parseFloat(lastPr);
             price = price*0.9998f;
-            String formattedPrice= new DecimalFormat("#.#").format(price);
+            String formattedPrice= Utils.numberFormatter(pricePrecision, price);
+            //String formattedPrice= new DecimalFormat("#.#").format(price);
             return formattedPrice;
     	}catch(Exception e){
     		System.err.println("Error getting ticker: " + e.getMessage());
